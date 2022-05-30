@@ -1,3 +1,91 @@
 * {
     font-family: sans;
 }
+
+h1 {
+    font-size: 2.5em;
+    margin-top: 0.67em;
+    margin-bottom: 0.67em;
+    text-align: center;
+}
+
+/* Social Media Icons */
+
+#socialMediaButtons {
+    display: table;
+    margin: 0 auto;
+}
+
+#socialMediaButtons a {
+    width: 64px;
+    height: 64px;
+    margin: 4px;
+    display: block;
+    float: left;
+    color: var(--socialMediaColor);
+    fill: var(--socialMediaColor);
+    border-radius: 100%;
+
+    -webkit-transition: background-color 0.8s,
+        -webkit-transform 0.8s ease-out;
+    transition: background-color 0.8s,
+        -webkit-transform 0.8s ease-out;
+    transition: background-color 0.8s,
+        transform 0.8s ease-out;
+    transition: background-color 0.8s,
+        transform 0.8s ease-out,
+        -webkit-transform 0.8s ease-out;
+}
+
+#socialMediaButtons a:hover {
+    background: var(--socialMediaColor);
+    color: white;
+    fill: white;
+}
+
+#socialMediaButtons .github {
+    --socialMediaColor: #171515;
+}
+
+#socialMediaButtons .linkedin {
+    --socialMediaColor: #0a66c2;
+}
+
+/* Drop Down Content */
+
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+
+.active:after {
+    content: "\2212";
+}
+
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.0.8s ease-out;
+    background-color: #f1f1f1;
+}
