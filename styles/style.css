@@ -1,12 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 * {
     font-family: sans;
+    --max-width: 800px;
 }
 
-h1 {
-    font-size: 2.5em;
-    margin-top: 0.67em;
-    margin-bottom: 0.67em;
+body {
+    margin: 0;
+    background-color: #4e545a;
+}
+
+/* Header */
+
+header {
+    background-color: #3a4147;
+    padding-top: 1em;
+}
+
+header h1 {
+    height: 80px;
+    font-size: 4em;
+    margin-top: 0;
+    margin-bottom: 0;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 /* Social Media Icons */
@@ -51,23 +69,47 @@ h1 {
     --socialMediaColor: #0a66c2;
 }
 
+/* Page Content */
+
+.content {
+    margin: auto;
+    max-width: var(--max-width);
+    background-color: #f1f1f1;
+    padding: 1px 14px;
+}
+
 /* Drop Down Content */
 
-.collapsible {
-    background-color: #777;
-    color: white;
-    cursor: pointer;
-    padding: 18px;
+.collapsibleButton {
+    background-color: #323741;
     width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
+    cursor: pointer;
+}
+
+.collapsibleActive {
+    background-color: #282e35;
+}
+
+.collapsibleButton:hover {
+    background-color: #212b2f;
+}
+
+.collapsible {
+    background-color: #2f343f;
+    padding: 18px;
+    margin: auto;
+    width: var(--max-width);
+    max-width: calc(100% - 33px);
+    color: white;
     font-size: 15px;
 }
 
-.active,
-.collapsible:hover {
-    background-color: #555;
+.collapsibleActive .collapsible {
+    background-color: #252d32;
+}
+
+.collapsibleButton:hover .collapsible {
+    background-color: #1e282c;
 }
 
 .collapsible:after {
@@ -78,14 +120,14 @@ h1 {
     margin-left: 5px;
 }
 
-.active:after {
+.collapsibleActive .collapsible:after {
     content: "\2212";
 }
 
-.content {
-    padding: 0 18px;
+.collapsibleContent {
+    padding: 0;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.0.8s ease-out;
-    background-color: #f1f1f1;
+    background-color: #d6d6d6;
 }

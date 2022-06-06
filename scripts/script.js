@@ -1,8 +1,8 @@
-let collapsibleElements = document.getElementsByClassName("collapsible");
+let collapsibleElements = document.getElementsByClassName("collapsibleButton");
 
 for (let i = 0; i < collapsibleElements.length; i++) {
     collapsibleElements[i].addEventListener("click", function () {
-        this.classList.toggle("active");
+        this.classList.toggle("collapsibleActive");
         var content = this.nextElementSibling;
         if (content.style.maxHeight) {
             content.style.maxHeight = null;
